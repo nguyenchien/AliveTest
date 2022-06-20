@@ -17,13 +17,21 @@ $(document).ready(function () {
     if ($(window).scrollTop() > elementPosition.top) {
       $(".header").addClass("fixed");
     } else {
-      //   $(".header").css("position", "static");
       $(".header").removeClass("fixed");
     }
   });
 
   // Animate
-  $(".concept-title").on("inview", function (e, t) {
-    $(this).stop().addClass("animate__backInRight");
+  $(".concept-content").on("inview", function (e, t) {
+    t && $(this).stop().addClass("animate__backInRight");
+  });
+  $(".concept-image").on("inview", function (e, t) {
+    t && $(this).stop().addClass("animate__backInLeft");
+  });
+  $(".news-blogs-heading").on("inview", function (e, t) {
+    t && $(this).stop().addClass("animate__backInDown");
+  });
+  $(".news-blogs-content").on("inview", function (e, t) {
+    t && $(this).stop().addClass("animate__backInUp");
   });
 });

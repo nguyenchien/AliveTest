@@ -1,25 +1,31 @@
 .header {
-  max-width: 1388px;
-  height: 110px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  @include maxWidth(767px) {
-    max-width: none;
-    height: 60px;
-    padding: 0 15px;
-    &.fixed {
-      position: fixed;
-      top: 0;
-      background: #fff;
-      width: 100%;
-      z-index: 1;
-      box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, 0.25);
+  .wrap {
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    @include maxWidth(767px) {
+      height: 60px;
+    }
+    @include minMaxWidth(768px, 1024px) {
+      height: 60px;
     }
   }
+  &.fixed {
+    position: fixed;
+    top: 0;
+    background: #fff;
+    width: 100%;
+    z-index: 1;
+    box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, 0.25);
+  }
+  @include maxWidth(767px) {
+    max-width: none;
+    padding: 0 15px;
+  }
   @include minMaxWidth(768px, 1024px) {
-    max-width: normal;
+    max-width: none;
     padding: 0 10px;
     height: 60px;
   }
@@ -66,9 +72,8 @@
   &-icon-toogle {
     display: none;
     @include maxWidth(767px) {
-      display: block;
-      flex: 1;
-      text-align: right;
+      display: inline-block;
+      margin-left: auto;
     }
   }
 }

@@ -5,6 +5,10 @@
     max-width: none;
   }
 }
+.wrap {
+  max-width: 1338px;
+  margin: 0 auto;
+}
 .global-text {
   font-family: $secondaryFont;
   font-size: 15px;
@@ -36,12 +40,13 @@
   cursor: pointer;
   content: "";
   display: inline-block;
-  width: 111px;
+  width: 100px;
   height: 280px;
   position: absolute;
-  right: -130px;
+  right: -120px;
   bottom: -87px;
   background: url("../images/common/image-to-top-pc.png") no-repeat 0 0;
+  background-size: cover;
   @include maxWidth(767px) {
     width: 42px;
     height: 155px;

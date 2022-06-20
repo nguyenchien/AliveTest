@@ -14,6 +14,10 @@ body {
     .container {
       max-width: none; } }
 
+.wrap {
+  max-width: 1338px;
+  margin: 0 auto; }
+
 .global-text {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 15px;
@@ -44,12 +48,13 @@ body {
   cursor: pointer;
   content: "";
   display: inline-block;
-  width: 111px;
+  width: 100px;
   height: 280px;
   position: absolute;
-  right: -130px;
+  right: -120px;
   bottom: -87px;
-  background: url("../images/common/image-to-top-pc.png") no-repeat 0 0; }
+  background: url("../images/common/image-to-top-pc.png") no-repeat 0 0;
+  background-size: cover; }
   @media screen and (max-width: 767px) {
     .croll-to-top {
       width: 42px;
@@ -66,69 +71,80 @@ body {
       right: 0;
       bottom: -23px; } }
 
-.header {
-  max-width: 1388px;
+.header .wrap {
   height: 110px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto; }
   @media screen and (max-width: 767px) {
-    .header {
-      max-width: none;
-      height: 60px;
-      padding: 0 15px; }
-      .header.fixed {
-        position: fixed;
-        top: 0;
-        background: #fff;
-        width: 100%;
-        z-index: 1;
-        box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, 0.25); } }
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .header {
-      max-width: normal;
-      padding: 0 10px;
+    .header .wrap {
       height: 60px; } }
-  @media screen and (max-width: 767px) {
-    .header-logo {
-      width: 184px; }
-      .header-logo img {
-        width: 100%; } }
   @media screen and (min-width: 768px) and (max-width: 1024px) {
-    .header-logo {
-      width: 184px; }
-      .header-logo img {
-        width: 100%; } }
-  .header-list {
-    display: flex;
-    column-gap: 40px; }
-    @media screen and (max-width: 767px) {
-      .header-list {
-        column-gap: normal;
-        display: none; } }
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      .header-list {
-        column-gap: 15px; } }
-  .header-item a {
-    display: block;
-    font-family: "Cormorant Garamond", sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #222222;
-    text-decoration: none;
-    padding: 15px 0; }
-    @media screen and (min-width: 768px) and (max-width: 1024px) {
-      .header-item a {
-        font-size: 11px;
-        padding: 7px 0; } }
-  .header-icon-toogle {
-    display: none; }
-    @media screen and (max-width: 767px) {
-      .header-icon-toogle {
-        display: block;
-        flex: 1;
-        text-align: right; } }
+    .header .wrap {
+      height: 60px; } }
+
+.header.fixed {
+  position: fixed;
+  top: 0;
+  background: #fff;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, 0.25); }
+
+@media screen and (max-width: 767px) {
+  .header {
+    max-width: none;
+    padding: 0 15px; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    max-width: none;
+    padding: 0 10px;
+    height: 60px; } }
+
+@media screen and (max-width: 767px) {
+  .header-logo {
+    width: 184px; }
+    .header-logo img {
+      width: 100%; } }
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .header-logo {
+    width: 184px; }
+    .header-logo img {
+      width: 100%; } }
+
+.header-list {
+  display: flex;
+  column-gap: 40px; }
+  @media screen and (max-width: 767px) {
+    .header-list {
+      column-gap: normal;
+      display: none; } }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header-list {
+      column-gap: 15px; } }
+
+.header-item a {
+  display: block;
+  font-family: "Cormorant Garamond", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #222222;
+  text-decoration: none;
+  padding: 15px 0; }
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header-item a {
+      font-size: 11px;
+      padding: 7px 0; } }
+
+.header-icon-toogle {
+  display: none; }
+  @media screen and (max-width: 767px) {
+    .header-icon-toogle {
+      display: inline-block;
+      margin-left: auto; } }
 
 .main-banner {
   max-width: 1388px;
