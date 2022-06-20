@@ -1,0 +1,74 @@
+.header {
+  max-width: 1388px;
+  height: 110px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  @include maxWidth(767px) {
+    max-width: none;
+    height: 60px;
+    padding: 0 15px;
+    &.fixed {
+      position: fixed;
+      top: 0;
+      background: #fff;
+      width: 100%;
+      z-index: 1;
+      box-shadow: 0px 0px 9px 3px rgba(41, 41, 41, 0.25);
+    }
+  }
+  @include minMaxWidth(768px, 1024px) {
+    max-width: normal;
+    padding: 0 10px;
+    height: 60px;
+  }
+  &-logo {
+    @include maxWidth(767px) {
+      width: 184px;
+      img {
+        width: 100%;
+      }
+    }
+    @include minMaxWidth(768px, 1024px) {
+      width: 184px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-list {
+    display: flex;
+    column-gap: 40px;
+    @include maxWidth(767px) {
+      column-gap: normal;
+      display: none;
+    }
+    @include minMaxWidth(768px, 1024px) {
+      column-gap: 15px;
+    }
+  }
+  &-item {
+    a {
+      display: block;
+      font-family: $primaryFont;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: $primaryColor;
+      text-decoration: none;
+      padding: 15px 0;
+      @include minMaxWidth(768px, 1024px) {
+        font-size: 11px;
+        padding: 7px 0;
+      }
+    }
+  }
+  &-icon-toogle {
+    display: none;
+    @include maxWidth(767px) {
+      display: block;
+      flex: 1;
+      text-align: right;
+    }
+  }
+}

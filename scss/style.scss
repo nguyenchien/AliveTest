@@ -1,0 +1,18 @@
+@import "mixins";
+@import "variables";
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: $primaryFont;
+  font-size: 14px;
+  line-height: 1;
+  color: $primaryColor;
+}
+@import "global";
+@import "header";
+@import "main-banner";
+@import "concept";
+@import "news-blogs";
+@import "footer";
+@import "menu-toogle";

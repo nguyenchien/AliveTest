@@ -1,0 +1,69 @@
+@include minWidth(750px) {
+  .menu-toogle {
+    display: none;
+  }
+}
+@include maxWidth(767px) {
+  body.overflow {
+    &::after {
+      position: fixed;
+      bottom: 0;
+      height: 100%;
+      width: 100%;
+      content: "";
+      background-color: rgba(0, 0, 0, 0.4);
+      pointer-events: none;
+    }
+  }
+  .menu-toogle {
+    width: 100%;
+    padding: 0 15px 55px;
+    background-color: #fff;
+    opacity: 0;
+    top: -100%;
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    &.active {
+      opacity: 1;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 2;
+    }
+    &-header {
+      height: 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+      &-logo {
+        display: block;
+        width: 183px;
+        img {
+          width: 100%;
+        }
+      }
+      &-icon-close {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+    }
+    &-item {
+      text-align: center;
+      a {
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        padding: 18px 10px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $primaryColor;
+        letter-spacing: 2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.main-banner {
+  max-width: 1388px;
+  margin: 0 auto 160px;
+  &-img-sp {
+    display: none;
+  }
+  &-img-pc {
+    display: block;
+  }
+  @include maxWidth(767px) {
+    margin-bottom: 80px;
+    max-width: none;
+    &-img-sp {
+      display: block;
+    }
+    &-img-pc {
+      display: none;
+    }
+  }
+  @include minMaxWidth(768px, 1024px) {
+    margin-bottom: 80px;
+  }
+  img {
+    width: 100%;
+  }
+}
