@@ -1,6 +1,8 @@
 .main-banner {
   max-width: 1388px;
   margin: 0 auto 160px;
+  position: relative;
+  z-index: 2;
   &-img-sp {
     display: none;
   }

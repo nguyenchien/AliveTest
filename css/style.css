@@ -148,7 +148,9 @@ body {
 
 .main-banner {
   max-width: 1388px;
-  margin: 0 auto 160px; }
+  margin: 0 auto 160px;
+  position: relative;
+  z-index: 2; }
   .main-banner-img-sp {
     display: none; }
   .main-banner-img-pc {
